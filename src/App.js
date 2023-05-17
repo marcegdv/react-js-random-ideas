@@ -51,14 +51,14 @@ function MenuOption({ text, onClick }) {
     };
 
     return (
-        <>
+        <div>
             {text === '-'
                 ? <div className='option-separator'></div>
                 : <div className='option-container' onClick={handleOnClick}>
                     <span className='option-text'>{text}</span>
                 </div>
             }
-        </>
+        </div>
     );
 
 };
