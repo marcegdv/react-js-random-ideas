@@ -1,64 +1,33 @@
-import React from 'react';
+import logo from './logo.svg';
 import './App.css';
 
 function App() {
-
     return (
-        <div className='container'>
-            <MenuOptions />
-            <MenuOptions />
-            <MenuOptions />
-            <MenuOptions />
-            <MenuOptions />
-            <MenuOptions />
+        <div className="App">
+            <header className="App-header">
+                <img src={logo} className="App-logo" alt="logo" />
+                <p>
+                    Edit <code>src/App.js</code> and save to reload.
+                </p>
+                <a
+                    className="App-link"
+                    href="https://reactjs.org"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Learn React
+                </a>
+                <Asd />
+            </header>
         </div>
     );
+}
 
+function Asd() {
+    return (
+        <p>asdadasdads</p>
+    );
 }
 
 export default App;
 
-
-
-function MenuOptions({ optionList }) {
-
-    const options = optionList || [
-        'New',
-        'Open...',
-        '-',
-        'Save',
-        'Save as...',
-        '-',
-        'Close',
-    ];
-
-    return (
-        <div className='menu-container'>
-            <div className='menu-options-contianer'>
-                {options.map(option =>
-                    <MenuOption text={option} key={option} onClick={() => alert(`Clicked ${option}!`)} />
-                )}
-            </div>
-        </div>
-    );
-
-};
-
-function MenuOption({ text, onClick }) {
-
-    const handleOnClick = () => {
-        if (onClick) onClick();
-    };
-
-    return (
-        <>
-            {text === '-'
-                ? <div className='option-separator'></div>
-                : <div className='option-container' onClick={handleOnClick}>
-                    <span className='option-text'>{text}</span>
-                </div>
-            }
-        </>
-    );
-
-};
