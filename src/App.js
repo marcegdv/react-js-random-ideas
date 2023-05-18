@@ -11,6 +11,16 @@ function App() {
             <MenuOptions />
             <MenuOptions />
             <MenuOptions />
+            <MenuOptions />
+            <MenuOptions />
+            <MenuOptions />
+            <MenuOptions />
+            <MenuOptions />
+            <MenuOptions />
+            <MenuOptions />
+            <MenuOptions />
+            <MenuOptions />
+            <MenuOptions />
         </div>
     );
 
